@@ -35,7 +35,6 @@ jobs:
         uses: actions/setup-node@v4
         with: 
           node-version: 20
-          cache: 'npm'
       - name: Install Dependencies (no package-lock)
         run: npm install --no-package-lock
       - name: Build
