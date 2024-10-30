@@ -87,10 +87,10 @@ function modalContents() {
   );
   contentHeading.innerHTML = data[0].title;
   contentDescription.innerHTML = data[0].discription;
-  images.innerHTML = data[0].imageContents.reduce((html, image) => {
+  images.innerHTML = data[0].imageContents.reduce((html, image, i) => {
     return (
       html +
-      `<div class="carousel-item active">
+      `<div class="carousel-item ${0 === i ? "active" : ""}">
       <img class="img-fluid rounded mb-5" src="${image}" alt="${image.split("/").pop().split(".").slice(0, -1).join(".")}">
       </div>
       `
