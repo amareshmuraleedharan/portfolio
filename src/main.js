@@ -1,4 +1,4 @@
-import data from "./js/data.json";
+import datas from "./js/data.json";
 /*!
  * Start Bootstrap - Freelancer v7.0.7 (https://startbootstrap.com/theme/freelancer)
  * Copyright 2013-2023 Start Bootstrap
@@ -75,27 +75,45 @@ function modalContents() {
   const portfolioOverviewTemplate = document.getElementById(
     "content-overview-template",
   );
-
-  let portpolioContent, images, contentHeading, contentDescription;
+  const overviewImageTemplate = document.getElementById(
+    "overview-image-carousel",
+  );
+  let portpolioContent,
+    images,
+    contentHeading,
+    contentDescription,
+    carouselImages;
 
   portpolioContent = portfolioOverviewTemplate.content.cloneNode(true);
+  // carouselImages = overviewImageTemplate.content.cloneNode(true);
 
   images = portpolioContent.querySelector("#content-overview-images");
   contentHeading = portpolioContent.querySelector("#content-overview-title");
   contentDescription = portpolioContent.querySelector(
     "#content-overview-discription",
   );
-  contentHeading.innerHTML = data[0].title;
-  contentDescription.innerHTML = data[0].discription;
-  images.innerHTML = data[0].imageContents.reduce((html, image, i) => {
-    return (
-      html +
-      `<div class="carousel-item ${0 === i ? "active" : ""}">
-      <img class="img-fluid rounded mb-5" src="${image}" alt="${image.split("/").pop().split(".").slice(0, -1).join(".")}">
-      </div>
-      `
-    );
-  }, "");
+  images.innerHTML = "";
+  datas.forEach((data) => {
+    contentHeading.innerHTML = data.title;
+    contentDescription.innerHTML = data.discription;
+    data?.imageContents.forEach((imageSrc, index) => {
+      let carouselImageContainer =
+        overviewImageTemplate.content.cloneNode(true);
+      let carouselImage = carouselImageContainer.querySelector("img");
+      let carouselContainer =
+        carouselImageContainer.querySelector(".carousel-item");
+      carouselImage.setAttribute("src", imageSrc);
+      carouselImage.setAttribute(
+        "alt",
+        imageSrc.split("/").pop().split(".").slice(0, -1).join("."),
+      );
+      if (0 === index) {
+        carouselContainer.classList.add("active");
+      }
+
+      images.appendChild(carouselImageContainer);
+    });
+  });
   console.log("iamges", images);
   portfolioOverview.appendChild(portpolioContent);
 }
