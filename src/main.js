@@ -1,3 +1,4 @@
+import "./css/styles.css";
 import datas from "./js/data.json";
 /*!
  * Start Bootstrap - Freelancer v7.0.7 (https://startbootstrap.com/theme/freelancer)
