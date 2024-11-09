@@ -1,8 +1,8 @@
-.profile-img{
+.profile-img {
     border-radius: 50%;
     width: 150px;
     height: 150px;
-    outline-color: rgb(18 71 60);
+    outline-color: rgb(26, 188, 156);
     outline-width: 5px;
     outline-style: solid;
 }
@@ -10,15 +10,15 @@
     margin-bottom: 15px;
 }
 .progress-container {
-    width: 100%;  /* full width of the container */
-    background-color: #e0e0e0;  /* background color of the unfilled portion */
+    width: 100%; /* full width of the container */
+    background-color: #e0e0e0; /* background color of the unfilled portion */
     border-radius: 5px;
     overflow: hidden;
     height: 8px; /* height of the progress bar */
 }
 .progress-bar {
-    height: 100%;  /* ensures it fills the container vertically */
-    background-color: #4caf50;  /* color of the filled portion */
+    height: 100%; /* ensures it fills the container vertically */
+    background-color: rgb(26, 188, 156);
     text-align: right; /* text aligned to the right for percentage display */
     color: white;
     padding-right: 5px;
