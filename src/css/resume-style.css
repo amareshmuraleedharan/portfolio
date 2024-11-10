@@ -24,3 +24,21 @@
     padding-right: 5px;
     border-radius: 5px 0 0 5px; /* rounded corners on the left side */
 }
+
+.img-width{
+    margin-left: 40px;
+}
+
+@media (min-width:300px) and (max-width:767px) {
+    .profile-img {
+        width: 130px;
+        height: 100px;
+    }
+}
+
+@media (min-width:500px) and (max-width:767px) {
+    .profile-img {
+        width: 150px;
+        height: 150px;
+    }
+}
