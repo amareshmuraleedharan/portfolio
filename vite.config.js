@@ -2,7 +2,7 @@ export default {
   base: "/portfolio/",
   root: "src",
   build: {
-    outDir: "./dist",
+    outDir: "../dist",
     rollupOptions: {
       input: {
         main: "src/index.html",
