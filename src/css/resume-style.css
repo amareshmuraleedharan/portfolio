@@ -1,0 +1,44 @@
+.profile-img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    outline-color: rgb(26, 188, 156);
+    outline-width: 5px;
+    outline-style: solid;
+}
+.skill {
+    margin-bottom: 15px;
+}
+.progress-container {
+    width: 100%; /* full width of the container */
+    background-color: #e0e0e0; /* background color of the unfilled portion */
+    border-radius: 5px;
+    overflow: hidden;
+    height: 8px; /* height of the progress bar */
+}
+.progress-bar {
+    height: 100%; /* ensures it fills the container vertically */
+    background-color: rgb(26, 188, 156);
+    text-align: right; /* text aligned to the right for percentage display */
+    color: white;
+    padding-right: 5px;
+    border-radius: 5px 0 0 5px; /* rounded corners on the left side */
+}
+
+.img-width{
+    margin-left: 40px;
+}
+
+@media (min-width:300px) and (max-width:767px) {
+    .profile-img {
+        width: 130px;
+        height: 100px;
+    }
+}
+
+@media (min-width:500px) and (max-width:767px) {
+    .profile-img {
+        width: 150px;
+        height: 150px;
+    }
+}

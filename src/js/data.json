@@ -1,0 +1,12 @@
+[
+  {
+    "id": 1,
+    "title": "militery vehicle",
+    "imageContents": [
+      "assets/img/projects/militery_vehicle.png",
+      "assets/img/projects/militery_vehicle2.png",
+      "assets/img/projects/militery_vehicle3.png"
+    ],
+    "discription": "This personalized collection of 3D models is created specifically for learning and mastering 3D software environments like Blender.From basic object creation to advanced techniques in modeling, texturing, lighting, and rendering. These projects range from simple forms to complex compositions, providing hands-on practice that encourages problem-solving and experimentation within the software."
+  }
+]
