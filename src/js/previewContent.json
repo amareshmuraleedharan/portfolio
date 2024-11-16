@@ -1,0 +1,64 @@
+[
+  {
+    "id": 3,
+    "content": {
+      "title": "Monster drink",
+
+      "media": {
+        "video": "./assets/video/donut.mp4",
+        "image": "./assets/img/projects/dounut.png"
+      }
+    }
+  },
+  {
+    "id": 3,
+    "content": {
+      "title": "Monster drink",
+
+      "media": {
+        "video": "./assets/video/monster_drink_3.mp4",
+        "image": "./assets/img/projects/monster_enargy.png"
+      }
+    }
+  },
+  {
+    "id": 4,
+    "content": {
+      "title": "chat bot",
+      "media": {
+        "video": "./assets/video/qudbot.mp4",
+        "image": "./assets/img/projects/creature.png"
+      }
+    }
+  },
+  {
+    "id": 3,
+    "content": {
+      "title": "militery vehicle",
+      "media": {
+        "video": "./assets/video/militery_vehicle_2.mp4",
+        "image": "./assets/img/projects/militery_vehicle2.png"
+      }
+    }
+  },
+  {
+    "id": 2,
+    "content": {
+      "title": "Speaker",
+      "media": {
+        "video": "./assets/video/wireless_speaker.mp4",
+        "image": ""
+      }
+    }
+  },
+  {
+    "id": 1,
+    "content": {
+      "title": "earpod",
+      "media": {
+        "video": "./assets/video/earpod.mp4",
+        "image": ""
+      }
+    }
+  }
+]
