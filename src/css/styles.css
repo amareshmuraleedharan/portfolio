@@ -11497,3 +11497,9 @@ html {
 .m-inline {
     margin-inline: 1rem;
 }
+
+.text-resposive {
+    a {
+        font-size: 1.5em;
+    }
+}
