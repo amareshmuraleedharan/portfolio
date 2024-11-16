@@ -1,6 +1,6 @@
 import "./css/styles.css";
 import overviewContent from "./js/overviewContent.json";
-import previewContent from "./js/previewContent.json";
+import { previewContent } from "./js/previewContent.js";
 /*!
  * Start Bootstrap - Freelancer v7.0.7 (https://startbootstrap.com/theme/freelancer)
  * Copyright 2013-2023 Start Bootstrap
