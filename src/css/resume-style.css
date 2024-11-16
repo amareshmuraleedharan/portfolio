@@ -42,3 +42,15 @@
         height: 150px;
     }
 }
+
+@media (min-width:768px) {
+    .resume-section {
+        background-color: #cacaca;
+        justify-content: center;
+
+    }
+    .inner-container {
+        width: 65%;
+        padding: 3rem;
+    }
+}
