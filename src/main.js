@@ -133,13 +133,6 @@ function previewContentShow() {
 
     portfolioContainer.appendChild(content);
   });
-
-  // portfolioContainer.appendChild(content2);
-  // portfolioContainer.appendChild(content3);
-  // type="video/mp4">
-  //   <source src="video.webm" type="video/webm">
-  //   <source src="video.ogg" type="video/ogg">
-  //
 }
 function videoContentPrview(src) {
   const video = document.createElement("video");
@@ -183,3 +176,69 @@ function imageContentPreview(src) {
 }
 
 previewContentShow();
+
+//Form submission
+const submitButton = document.getElementById("submitButton");
+submitButton.onclick = (e) => {
+  e.preventDefault();
+  const email = "amareshkm619";
+  const domain = "gmail.com";
+  const subject = "Resume Inquiry";
+  const body = document.getElementById("message").value;
+  const name = document.getElementById("name").value;
+  let phone = document.getElementById("phone").value;
+  phone = phone.trim().replace(/\D/g, "");
+  const fromMail = document.getElementById("email").value;
+  console.log("email form submission:", name, phone, body, fromMail);
+  if ("" === name) {
+    let name_error = document.getElementById("name-error");
+    name_error.innerText = "Name is required!!!";
+    name_error.style.display = "block";
+  }
+  if ("" === body) {
+    let message_error = document.getElementById("message-error");
+    message_error.innerText = "message is required!!!";
+    message_error.style.display = "block";
+  }
+  if ("" === phone) {
+    let phone_error = document.getElementById("phone-error");
+    phone_error.innerText = "phone is required!!!";
+    phone_error.style.display = "block";
+  }
+  if ("" === fromMail) {
+    let fromMail_error = document.getElementById("email-error");
+    fromMail_error.innerText = "email is required!!!";
+    fromMail_error.style.display = "block";
+  }
+  if ("" !== name && "" !== fromMail && "" !== body && "" !== phone) {
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    const phoneRegex =
+      /^(?:\+?\d{1,3}[-.\s]?)?(\(?\d{3}\)?[-.\s]?)?\d{3}[-.\s]?\d{4}$/;
+    const phoneValidation = /^\d{10}$/;
+
+    if (!emailRegex.test(fromMail)) {
+      let fromMail_error = document.getElementById("email-error");
+      fromMail_error.innerText = "Email is not valid!!!";
+      fromMail_error.style.display = "block";
+      return;
+    }
+    if (!phoneRegex.test(phone) || !phoneValidation.test(phone)) {
+      let fromMail_error = document.getElementById("phone-error");
+      fromMail_error.innerText = `phone is not valid!!!
+        And should be in (123) 456-7890 or 1234567890`;
+      fromMail_error.style.display = "block";
+      return;
+    }
+    let contentBody = `
+      Name:${name}
+      contact:${phone}
+      ${body}
+      `;
+    const mailtoLink = `mailto:${email}@${domain}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(contentBody)}`;
+    const virtualLink = document.createElement("a");
+    virtualLink.href = mailtoLink;
+    virtualLink.click();
+
+    console.log("mailcontent :", contentBody, mailtoLink);
+  }
+};
