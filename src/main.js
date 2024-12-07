@@ -118,7 +118,6 @@ function previewContentShow() {
   // content2 = protfolioContentTemplate.content.cloneNode(true);
   // content3 = protfolioContentTemplate.content.cloneNode(true);
   previewContent.forEach((preview) => {
-    console.log("preview", previewContent, preview);
     let content = protfolioContentTemplate.content.cloneNode(true);
     let previewContentShow = content.querySelector("#content-preview");
     // const overviewClick = document.getElementById("overview-click");
@@ -170,7 +169,6 @@ function videoContentPrview(src) {
   }
   video.appendChild(source);
   video.onerror = () => {
-    console.log("onerror", src.image);
     video.style.display = "none";
     imageContentPreview(src.image);
   };
@@ -188,4 +186,3 @@ previewContentShow();
 // pdf download
 const pdflink = document.getElementById("resumePdf");
 pdflink.href = resumePdf;
-console.log("link :", pdflink, resumePdf);
